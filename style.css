@@ -1,0 +1,46 @@
+[role="table"] {
+    display: table;
+
+}
+
+[role="table"] [role="rowgroup"]:last-child [role="row"]:nth-child(odd) {
+    background-color: #ddd;
+}
+
+[role="table"] [role="row"] {
+    display: table-row;
+}
+
+[role="table"] [role="cell"],
+[role="table"] [role="columnheader"] {
+    display: table-cell;
+    padding: 0.125em 0.25em;
+    width: 8em;
+    border: gray thin solid;
+}
+
+/* GRID */
+[role="grid"] [role="row"] {
+    /*display: table-row;*/
+}
+
+[role="grid"] [role="gridcell"],
+[role="grid"] [role="columnheader"] {
+    display: table-cell;
+    /*padding: 0.125em 0.25em;*/
+    width: 2em;
+    height: 2em;
+    border: white thin solid;
+}
+
+[role="grid"] [role="columnheader"] {
+    font-weight: bold;
+}
+
+[role="grid"] [role="gridcell"] button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    /*background-color: white;*/
+}
+

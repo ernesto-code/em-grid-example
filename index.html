@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table - Grid example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Grid - Table Examples</h1>
+    <h2>Table using ARIA</h2>
+    <div role="table" aria-label="Students">
+        <div id="students_table_desc">Students </div>
+        <div role="rowgroup">
+            <div role="row">
+                <span role="columnheader">First Name</span>
+                <span role="columnheader">Last Name</span>
+                <span role="columnheader">Company</span>
+                <span role="columnheader">Address</span>
+            </div>
+        </div>
+        <div role="rowgroup">
+            <div role="row">
+                <span role="cell">Fred</span>
+                <span role="cell">Jackson</span>
+                <span role="cell">Acme, Inc.</span>
+                <span role="cell">123 Broad St.</span>
+            </div>
+            <div role="row">
+                <span role="cell">Sara</span>
+                <span role="cell">James</span>
+                <span role="cell">Acme, Inc.</span>
+                <span role="cell">123 Broad St.</span>
+            </div>
+            <div role="row">
+                <span role="cell">Ralph</span>
+                <span role="cell">Jefferson</span>
+                <span role="cell">XYZ, Inc.</span>
+                <span role="cell">456 Main St.</span>
+            </div>
+            <div role="row">
+                <span role="cell">Nancy</span>
+                <span role="cell">Jensen</span>
+                <span role="cell">XYZ, Inc.</span>
+                <span role="cell">456 Main St.</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2>Grid using ARIA</h2>
+    <div role="grid" aria-label="Calendar" aria-describedby="month" style="width:15em;">
+        <div id="month" style="text-align: center;">July 2021</div>
+        <div role="rowgroup">
+            <div role="row">
+                <span role="columnheader" aria-label="Sunday">Su</span>
+                <span role="columnheader" aria-label="Monday">Mo</span>
+                <span role="columnheader" aria-label="Tuesday">Tu</span>
+                <span role="columnheader" aria-label="Wendesday">We</span>
+                <span role="columnheader" aria-label="Thursday">Th</span>
+                <span role="columnheader" aria-label="Friday">Fr</span>
+                <span role="columnheader" aria-label="Saturday">Sa</span>
+            </div>
+        </div>
+        <div role="rowgroup">
+            <div role="row">
+                <span role="gridcell"><button disabled tabindex="-1" type="button">27</button></span>
+                <span role="gridcell"><button disabled tabindex="-1" type="button">28</button></span>
+                <span role="gridcell"><button disabled tabindex="-1" type="button">29</button></span>
+                <span role="gridcell"><button disabled tabindex="-1" type="button">30</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="0"
+                        type="button">1</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">2</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">3</button></span>
+            </div>
+            <div role="row">
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">4</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">5</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">6</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">7</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">8</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">9</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">10</button></span>
+            </div>
+            <div role="row">
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">11</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">12</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">13</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">14</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">15</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">16</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">17</button></span>
+            </div>
+            <div role="row">
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">18</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">19</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">20</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">21</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">22</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">23</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">24</button></span>
+            </div>
+            <div role="row">
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">25</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">26</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">27</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">28</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">29</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">30</button></span>
+                <span role="gridcell"><button onkeydown='cellKeydownHandler(event)' tabindex="-1"
+                        type="button">31</button></span>
+            </div>
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
